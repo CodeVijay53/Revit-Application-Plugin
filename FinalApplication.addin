@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<RevitAddIns>
+  <AddIn Type="Application">
+    <Name>DemoApp</Name>
+    <FullClassName>FinalApplication.RvtAp.App</FullClassName>
+    <Assembly>D:\15 Revit API Cad Custom Feesworth\02 Revit API Training\00 Assignments\FinalApplication\bin\Debug\FinalApplication.dll</Assembly>
+    <AddInId>2A6BC69F-85D1-4457-83B1-C58EA5545A9F</AddInId>
+    <VendorId>ADSK</VendorId>
+    <VendorDescription>Autodesk, Inc, www.autodesk.com</VendorDescription>
+  </AddIn>
+</RevitAddIns>

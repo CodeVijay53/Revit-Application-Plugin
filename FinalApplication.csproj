@@ -1,0 +1,350 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{3367629A-7280-4EA7-B939-62C488B4D72E}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>FinalApplication</RootNamespace>
+    <AssemblyName>FinalApplication</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EPPlus, Version=7.5.0.0, Culture=neutral, PublicKeyToken=ea159fdaa78159a1, processorArchitecture=MSIL">
+      <HintPath>..\packages\EPPlus.7.5.0\lib\net462\EPPlus.dll</HintPath>
+    </Reference>
+    <Reference Include="EPPlus.Interfaces, Version=7.5.0.0, Culture=neutral, PublicKeyToken=a694d7f3b0907a61, processorArchitecture=MSIL">
+      <HintPath>..\packages\EPPlus.Interfaces.7.5.0\lib\net462\EPPlus.Interfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="EPPlus.System.Drawing, Version=7.5.0.0, Culture=neutral, PublicKeyToken=2308d35469c9bac0, processorArchitecture=MSIL">
+      <HintPath>..\packages\EPPlus.System.Drawing.7.5.0\lib\net462\EPPlus.System.Drawing.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.IO.RecyclableMemoryStream, Version=3.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.IO.RecyclableMemoryStream.3.0.1\lib\netstandard2.0\Microsoft.IO.RecyclableMemoryStream.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="RevitAPI">
+      <HintPath>C:\Program Files\Autodesk\Revit 2023\RevitAPI.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="RevitAPIUI">
+      <HintPath>C:\Program Files\Autodesk\Revit 2023\RevitAPIUI.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel.Annotations, Version=4.2.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.ComponentModel.Annotations.5.0.0\lib\net461\System.ComponentModel.Annotations.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Drawing.Common, Version=8.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Drawing.Common.8.0.4\lib\net462\System.Drawing.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Memory, Version=4.0.1.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Memory.4.5.5\lib\net461\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors, Version=4.1.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Numerics.Vectors.4.5.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=4.0.4.1, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.4.5.3\lib\net461\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Command\17-RenameMultipleSheets_Cmd.cs" />
+    <Compile Include="Command\16-CreateMultipleSheets_Cmd.cs" />
+    <Compile Include="Command\15-ChangeViewDetailLevel_Cmd.cs" />
+    <Compile Include="Command\14-DuplicateFloorPlan_Cmd.cs" />
+    <Compile Include="Command\13-Create3DView_Cmd.cs" />
+    <Compile Include="Command\12-FamilyParameters_Cmd.cs" />
+    <Compile Include="Command\11-ParameterChanger_Cmd.cs" />
+    <Compile Include="Command\2-DoorInfo_Cmd.cs" />
+    <Compile Include="Command\1-WallHeight_Cmd.cs" />
+    <Compile Include="Command\10-RoomParameter_Cmd.cs" />
+    <Compile Include="Command\9-DeleteRooms_Cmd .cs" />
+    <Compile Include="Command\8-ClosingViews_Cmd.cs" />
+    <Compile Include="Command\7-WindowDelete_Cmd.cs" />
+    <Compile Include="Command\6-FloorCreation_Cmd.cs" />
+    <Compile Include="Command\5-RoomCreation_Cmd.cs" />
+    <Compile Include="Command\4-WallCreation_Cmd.cs" />
+    <Compile Include="Command\3-ColumnInfo_Cmd.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="RvtApp\App.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Views\RenameMultipleSheets.xaml.cs">
+      <DependentUpon>RenameMultipleSheets.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\CreateMultipleSheets.xaml.cs">
+      <DependentUpon>CreateMultipleSheets.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ChangeViewDetailLevel.xaml.cs">
+      <DependentUpon>ChangeViewDetailLevel.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\DuplicateFloorPlan.xaml.cs">
+      <DependentUpon>DuplicateFloorPlan.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Create3DView.xaml.cs">
+      <DependentUpon>Create3DView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ParameterChanger.xaml.cs">
+      <DependentUpon>ParameterChanger.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\FamilyParameters.xaml.cs">
+      <DependentUpon>FamilyParameters.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\RoomParameter.xaml.cs">
+      <DependentUpon>RoomParameter.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\DeleteRooms.xaml.cs">
+      <DependentUpon>DeleteRooms.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ClosingViews.xaml.cs">
+      <DependentUpon>ClosingViews.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\WindowDelete.xaml.cs">
+      <DependentUpon>WindowDelete.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ColumnInfo.xaml.cs">
+      <DependentUpon>ColumnInfo.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\DoorType.xaml.cs">
+      <DependentUpon>DoorType.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\WallCreation.xaml.cs">
+      <DependentUpon>WallCreation.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\RoomCreation.xaml.cs">
+      <DependentUpon>RoomCreation.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\FloorCreation.xaml.cs">
+      <DependentUpon>FloorCreation.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\WallHeight.xaml.cs">
+      <DependentUpon>WallHeight.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="FinalApplication.addin" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\columnButtonData.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\doorButtonData.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\wallButtonData.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\floorButtonData.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\roomButtonData.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\wallCButtonData.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\winDelButtonData.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\viewClsButtonData.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\roomDelButtonData.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\famParamButtonData.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\specParamButtonData.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\roomParamButtonData.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\renMulSheetButtonData.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\creMulSheetButtonData.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\detLevelButtonData.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\floorPlanButtonData.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\threeDViewButtonData.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\renMulSheetButtonData_PNG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\creMulSheetButtonData_PNG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\detLevelButtonData_PNG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\floorPlanButtonData_PNG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\threeDViewButtonData_PNG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\famParamButtonData_PNG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\specParamButtonData_PNG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\roomParamButtonData_PNG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\winDelButtonData_PNG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\viewClsButtonData_PNG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\roomDelButtonData_PNG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\wallCButtonData_PNG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\floorButtonData_PNG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\roomButtonData_PNG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\columnButtonData_PNG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\doorButtonData_PNG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\wallButtonData_PNG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="Views\RenameMultipleSheets.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\CreateMultipleSheets.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\ChangeViewDetailLevel.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\DuplicateFloorPlan.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Create3DView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\ParameterChanger.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\FamilyParameters.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\RoomParameter.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\DeleteRooms.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\ClosingViews.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\WindowDelete.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\ColumnInfo.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\DoorType.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\WallCreation.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\RoomCreation.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\FloorCreation.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\WallHeight.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

@@ -1,0 +1,28 @@
+﻿<Window x:Class="FinalApplication.Views.RoomCreation"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Room Creator" Height="400" Width="300" ResizeMode="NoResize">
+    <Grid>
+        <StackPanel Margin="10">
+            <TextBlock Text="Room Name:" Margin="5" />
+            <TextBox x:Name="RoomNameTextBox" Margin="5" />
+
+            <TextBlock Text="Room Number:" Margin="5" />
+            <TextBox x:Name="RoomNumberTextBox" Margin="5" />
+
+            <TextBlock Text="Room Width (ft):" Margin="5" />
+            <TextBox x:Name="RoomWidthTextBox" Margin="5" />
+
+            <TextBlock Text="Room Height (ft):" Margin="5" />
+            <TextBox x:Name="RoomHeightTextBox" Margin="5" />
+
+            <TextBlock Text="Room Type:" Margin="5" />
+            <TextBox x:Name="RoomTypeTextBox" Margin="5" />
+
+            <TextBlock Text="Select Level:" Margin="5" />
+            <ComboBox x:Name="LevelComboBox" Margin="5" />
+
+            <Button Content="Create Room" Click="OnCreateRoomClick" Margin="5" />
+        </StackPanel>
+    </Grid>
+</Window>

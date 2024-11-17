@@ -1,0 +1,11 @@
+﻿<Window x:Class="FinalApplication.Views.WallHeight"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             Title="Set Wall Height" Height="150" Width="250" ResizeMode="NoResize">
+    <Grid>
+        <Label Content="Enter Wall Height (in mm):" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="15,20,20,0"/>
+        <TextBox Name="HeightTextBox" HorizontalAlignment="Left" Height="20" VerticalAlignment="Top" Width="120" Margin="20,60,0,0"/>
+        <Button Content="OK" HorizontalAlignment="Right" VerticalAlignment="Top" Width="75" Margin="0,60,20,0" Click="OKButton_Click"/>
+    </Grid>
+</Window>

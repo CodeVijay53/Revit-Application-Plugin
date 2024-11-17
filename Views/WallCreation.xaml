@@ -1,0 +1,19 @@
+﻿<Window x:Class="FinalApplication.Views.WallCreation"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="WallCreation" Height="250" Width="400" ResizeMode="NoResize">
+    <Grid>
+        <StackPanel Margin="10">
+            <TextBlock Text="Select Level:" Margin="5" />
+            <ComboBox x:Name="LevelComboBox" Height="30" />
+
+            <TextBlock Text="Enter Height:" Margin="5" />
+            <TextBox x:Name="HeightTextBox" Height="30" />
+
+            <TextBlock Text="Enter Thickness:" Margin="5" />
+            <TextBox x:Name="ThicknessTextBox" Height="30" />
+
+            <Button Content="Create Wall" Click="OnCreateWallClick" Margin="5" Height="40" />
+        </StackPanel>
+    </Grid>
+</Window>

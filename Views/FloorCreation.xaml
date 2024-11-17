@@ -1,0 +1,22 @@
+﻿<Window x:Class="FinalApplication.Views.FloorCreation"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Floor Creator" Height="400" Width="400" ResizeMode="NoResize">
+    <Grid>
+        <StackPanel Margin="10">
+            <TextBlock Text="Floor Width (ft):" Margin="5" />
+            <TextBox x:Name="WidthTextBox" Margin="5" />
+
+            <TextBlock Text="Floor Height (ft):" Margin="5" />
+            <TextBox x:Name="HeightTextBox" Margin="5" />
+
+            <TextBlock Text="Select Level:" Margin="5" />
+            <ComboBox x:Name="LevelComboBox" Margin="5" />
+
+            <TextBlock Text="Select Floor Type:" Margin="5" />
+            <ComboBox x:Name="FloorTypeComboBox" Margin="5" />
+
+            <Button Content="Create Floor" Click="OnCreateFloorClick" Margin="5" Height="30" />
+        </StackPanel>
+    </Grid>
+</Window>
